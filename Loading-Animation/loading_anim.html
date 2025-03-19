@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=400px, initial-scale=1.0">
+    <title>Loading Animation</title>
+    <style>
+        .loading {
+            height: 20rem;
+            width: 20rem;
+            border: 1.7rem solid green;
+            border-top: 1.7rem solid transparent;
+            border-left: 1.7rem solid transparent;
+            border-radius: 50%;
+            transform: rotate(0deg);
+            animation-name: sb;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        .container {
+            position: absolute;
+            text-align: center;
+            left: 35%;
+            top: 20%;
+        }
+
+        .text {
+            text-transform: uppercase;
+            font-size: 70px;
+            font-weight: 800;
+        }
+
+        @keyframes sb {
+            0% {
+                border-right-color: rgb(255, 0, 255);
+                border-bottom-color: rgb(255, 0, 255);
+            }
+
+            25% {
+                transform: rotate(90deg);
+                border-right-color: blue;
+                border-bottom-color: blue;
+            }
+
+            50% {
+                transform: rotate(180deg);
+                border-right-color: rgb(255, 0, 0);
+                border-bottom-color: rgb(255, 0, 0);
+            }
+
+            75% {
+                border-right-color: rgb(255, 255, 0);
+                border-bottom-color: rgb(255, 255, 0);
+            }
+
+            100% {
+                transform: rotate(360deg);
+                border-right-color: green;
+                border-bottom-color: green;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="loading"></div>
+        <div class="text">loading...</div>
+    </div>
+</body>
+
+</html>

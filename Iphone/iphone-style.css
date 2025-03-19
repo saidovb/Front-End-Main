@@ -1,0 +1,90 @@
+.container {
+    width: 100%;
+    z-index: -1;
+}
+.container2 {
+    margin-top: 150px;
+}
+.container-fluid{
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 100px;
+    filter: drop-shadow(8px 8px 10px rgb(0, 0, 0));
+}
+#navbar-brand {
+    width: 5%;
+    margin-right: 20px;
+}
+
+#nav-item {
+    margin-right: 50px;
+    font-weight: 500;
+    font-size: 25px;
+    padding: 20px;
+}
+
+.nav-link {
+    font-weight: 500;
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+
+#nav-item a:hover {
+    letter-spacing: 3px;
+    color: rgb(195, 0, 0);
+}
+
+.brand-name {
+    font-weight: 900;
+    font-size: 30px;
+}
+
+.info {
+    font-size: 22px;
+    margin-top: 50px;
+    font-family: sans-serif;
+}
+
+.main-img {
+    width: 30%;
+    float: right;
+    margin-top: 35px;
+}
+
+.header {
+    background-image: radial-gradient(to right, blue , pink);
+}
+
+#header,
+.header-2 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.card {
+    float: inline-start;
+    margin: 10px;
+}
+.card-img-top {
+    height: 280px;
+    width: 204px;
+}
+.brand-neym {
+    text-align: center;
+}
+.company {
+    position: relative;
+    top: 100px;
+    text-align: center;
+}
+#navbar {
+    position: fixed;
+    z-index: 1;
+}
+
+
+@media screen and (min-width: 991px) {
+    .brand-name {
+        display: none;
+    }
+}

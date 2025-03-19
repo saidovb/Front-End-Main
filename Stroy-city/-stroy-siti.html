@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Строй Сити</title>
+  <link rel="stylesheet" href="-style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  
+<body>
+  <div class="container">
+    <nav id="nav" class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a id="navbar-brand" class="navbar-brand" href="#">Строй Сити
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" id="icon" class="bi bi-shop" viewBox="0 0 16 16">
+            <path
+              d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.37 2.37 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0M1.5 8.5A.5.5 0 0 1 2 9v6h1v-5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5h6V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5M4 15h3v-5H4zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1zm3 0h-2v3h2z" />
+          </svg></a>
+        <button id="btn-nav" class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span id="nav-icon" class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a id="nav-link" class="nav-link active" aria-current="page" href="#">Asosiy Menyu</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a id="nav-link" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Mahsulotlar
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#hr">Insturmentlar</a></li>
+                <li><a class="dropdown-item" href="#asboblar">Asboblar</a></li>
+                <li><a class="dropdown-item" href="#Boyoqlar">Bo'yoqlar</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a id="nav-link" class="nav-link" href="#">Manzil</a>
+            </li>
+            <li class="nav-item">
+              <a id="nav-link" class="nav-link" href="#">Chiqish</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Qidiruv" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Qidirish</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <h1 class="brand-name">Строй Сити</h1>
+    <article class="article">
+      <hr id="hr">
+      <h1 id="products" class="products">Mahsulotlar</h1>
+
+      <h5 class="catigory">Insturmentlar</h5>
+      <div class="card" id="card" style="width: 18rem;">
+        <img src="images/shurpayor.webp" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Shurpayor</h5>
+          <p class="card-text">
+            Nomi: Welloo <br>
+            Narxi: 890 000 sum
+          </p>
+          <a href="#" class="btn btn-primary">Buyurtma berish</a>
+        </div>
+      </div>
+
+      <div class="card" id="card" style="width: 18rem;">
+        <img src="images/balgarka.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Balg'arka</h5>
+          <p class="card-text">
+            Nomi: Ineco <br>
+            Narxi: 1100 000 sum
+          </p>
+          <a href="#" class="btn btn-primary">Buyurtma berish</a>
+        </div>
+      </div>
+      <div class="card" id="card" style="width: 18rem;">
+        <img src="images/ituk.webp" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Utik</h5>
+          <p class="card-text">
+            Nomi: Ineco <br>
+            Narxi: 650 000 sum
+          </p>
+          <a href="#" class="btn btn-primary">Buyurtma berish</a>
+        </div>
+      </div>
+
+      <div class="card" id="card" style="width: 18rem;">
+        <img src="images/kesgich.webp" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Taxta kesuchi</h5>
+          <p class="card-text">
+            Nomi: Ineco <br>
+            Narxi: 390 000 sum
+          </p>
+          <a href="#" class="btn btn-primary">Buyurtma berish</a>
+        </div>
+      </div>
+
+      <div class="card" id="card" style="width: 18rem;">
+        <img src="images/kraska.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Kraska sepuvchi</h5>
+          <p class="card-text">
+            Nomi: Ineco <br>
+            Narxi: 49 999 sum
+          </p>
+          <a href="#" class="btn btn-primary">Buyurtma berish</a>
+        </div>
+      </div>
+
+      <div class="card" id="card" style="width: 18rem;">
+        <img src="images/Lobzik.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Lobzik Arra</h5>
+          <p class="card-text">
+            Nomi: Ineco <br>
+            Narxi: 200 000 sum
+          </p>
+          <a href="#" class="btn btn-primary">Buyurtma berish</a>
+        </div>
+      </div>
+
+      <div class="card" id="card" style="width: 18rem;">
+        <img src="images/Havo.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Havo purkagich</h5>
+          <p class="card-text">
+            Nomi: Ineco <br>
+            Narxi: 410 000 sum
+          </p>
+          <a href="#" class="btn btn-primary">Buyurtma berish</a>
+        </div>
+      </div>
+
+      <div class="card" id="card" style="width: 18rem;">
+        <img src="images/Arra.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Elektron Arra</h5>
+          <p class="card-text">
+            Nomi: Ineco <br>
+            Narxi: 340 000 sum
+          </p>
+          <a href="#" class="btn btn-primary">Buyurtma berish</a>
+        </div>
+      </div>
+
+      <div class="card" id="card" style="width: 18rem;">
+        <img src="images/Suvarka.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Suvarak aparat</h5>
+          <p class="card-text">
+            Nomi: Ineco <br>
+            Narxi: 340 000 sum
+          </p>
+          <a href="#" class="btn btn-primary">Buyurtma berish</a>
+        </div>
+      </div>
+
+      <div class="card" id="card" style="width: 18rem;">
+        <img src="images/drill.webp" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Drell</h5>
+          <p class="card-text">
+            Nomi: Ineco <br>
+            Narxi: 340 000 sum
+          </p>
+          <a href="#" class="btn btn-primary">Buyurtma berish</a>
+        </div>
+      </div>
+
+      <div class="card" id="card" style="width: 18rem;">
+        <img src="images/laser.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Lazer</h5>
+          <p class="card-text">
+            Nomi: Ineco <br>
+            Narxi: 240 000 sum
+          </p>
+          <a href="#" class="btn btn-primary">Do whatever</a>
+        </div>
+      </div>
+
+
+      <span id="asboblar"></span>
+      <h5 class="catigory">Asboblar</h5>
+      <div class="card" id="card" style="width: 18rem;">
+        <img src="images/gufsi.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Gufsi</h5>
+          <p class="card-text">
+            Nomi: Ineco <br>
+            Narxi: 35 000 sum
+          </p>
+          <a href="#" class="btn btn-primary">Buyurtma berish</a>
+        </div>
+      </div>
+
+      <div class="card" id="card" style="width: 18rem;">
+        <img src="images/otvelka.jpg" id="otvelka" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Otvelka</h5>
+          <p class="card-text">
+            Nomi: Ineco <br>
+            Narxi: 20 000 sum
+          </p>
+          <a href="#" class="btn btn-primary">Buyurtma berish</a>
+        </div>
+      </div>
+
+      <div class="card" id="card" style="width: 18rem;">
+        <img src="images/kusachka.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Kusachka</h5>
+          <p class="card-text">
+            Nomi: Ineco <br>
+            Narxi: 30 000 sum
+          </p>
+          <a href="#" class="btn btn-primary">Buyurtma berish</a>
+        </div>
+      </div>
+
+      <div class="card" id="card" style="width: 18rem;">
+        <img src="images/Kluch.jpg" id="kluch" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Kluch</h5>
+          <p class="card-text">
+            Nomi: Ineco <br>
+            Narxi: 120 000 sum
+          </p>
+          <a href="#" class="btn btn-primary">Buyurtma berish</a>
+        </div>
+      </div>
+
+      <div class="card" id="card" style="width: 18rem;">
+        <img src="images/Kluch-2.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Nabor Kluch</h5>
+          <p class="card-text">
+            Nomi: Epica <br>
+            Narxi: 150 000 sum
+          </p>
+          <a href="#" class="btn btn-primary">Buyurtma berish</a>
+        </div>
+      </div>
+
+      <div class="card" id="card" style="width: 18rem;">
+        <img src="images/Otkirlochi.webp" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">O'tkirlagich</h5>
+          <p class="card-text">
+            Nomi: Welloo <br>
+            Narxi: 890 000 sum
+          </p>
+          <a href="#" class="btn btn-primary">Buyurtma berish</a>
+        </div>
+      </div>
+
+      <div class="card" id="card" style="width: 18rem;">
+        <img src="images/qsgch.webp" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">гаечный ключ</h5>
+          <p class="card-text">
+            Nomi: Stanley <br>
+            Narxi: 60 000 sum
+          </p>
+          <a href="#" class="btn btn-primary">Buyurtma berish</a>
+        </div>
+      </div>
+
+      <div class="card" id="card" style="width: 18rem;">
+        <img src="images/Kesgch.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Mix qupargich</h5>
+          <p class="card-text">
+            Nomi: Welloo <br>
+            Narxi: 120 000 sum
+          </p>
+          <a href="#" class="btn btn-primary">Buyurtma berish</a>
+        </div>
+      </div>
+
+      <div class="card" id="card" style="width: 18rem;">
+        <img src="images/sheton.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Shayton (Urven)</h5>
+          <p class="card-text">
+            Nomi: Ineco <br>
+            Narxi: 95 000 sum
+          </p>
+          <a href="#" class="btn btn-primary">Buyurtma berish</a>
+        </div>
+      </div>
+
+      <div class="card" id="card" style="width: 18rem;">
+        <img src="images/igolnik.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Ugolnik</h5>
+          <p class="card-text">
+            Nomi: RemoKolo <br>
+            Narxi: 45 000 sum
+          </p>
+          <a href="#" class="btn btn-primary">Buyurtma berish</a>
+        </div>
+      </div>
+
+      <div class="card" id="card" style="width: 18rem;">
+        <img src="images/Metr.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Metr 3.5,5,7,10</h5>
+          <p class="card-text">
+            Nomi: Sariq <br>
+            Narxi: 28 000 sum
+          </p>
+          <a href="#" class="btn btn-primary">Buyurtma berish</a>
+        </div>
+      </div>
+
+      <div class="card" id="card" style="width: 18rem;">
+        <img src="images/bolta.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Bolta</h5>
+          <p class="card-text">
+            Nomi: Welloo <br>
+            Narxi: 85 000 sum
+          </p>
+          <a href="#" class="btn btn-primary">Buyurtma berish</a>
+        </div>
+      </div>
+
+      <div class="card" id="card" style="width: 18rem;">
+        <img src="images/lapatka.webp" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Lapatka</h5>
+          <p class="card-text">
+            Nomi: 666 Rus <br>
+            Narxi: 60 000 sum
+          </p>
+          <a href="#" class="btn btn-primary">Buyurtma berish</a>
+        </div>
+      </div>
+
+      <div class="card" id="card" style="width: 18rem;">
+        <img src="images/ketmon.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Ketmon</h5>
+          <p class="card-text">
+            Nomi: Amtech <br>
+            Narxi: 40 000 sum
+          </p>
+          <a href="#" class="btn btn-primary">Buyurtma berish</a>
+        </div>
+      </div>
+
+      <div class="card" id="card" style="width: 18rem;">
+        <img src="images/Arra.webp" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Taxlanuvch Arra</h5>
+          <p class="card-text">
+            Nomi: Grazone <br>
+            Narxi: 99 999 sum
+          </p>
+          <a href="#" class="btn btn-primary">Buyurtma berish</a>
+        </div>
+      </div>
+
+      <div class="card" id="card" style="width: 18rem;">
+        <img src="images/Arra-2.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Arra</h5>
+          <p class="card-text">
+            Nomi: Welloo <br>
+            Narxi: 110 000 sum
+          </p>
+          <a href="#" class="btn btn-primary">Buyurtma berish</a>
+        </div>
+      </div>
+
+      <div class="card" id="card" style="width: 18rem;">
+        <img src="images/Pchoq.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Rabotchi pichoq</h5>
+          <p class="card-text">
+            Nomi: Gardon <br>
+            Narxi: 20 000 sum
+          </p>
+          <a href="#" class="btn btn-primary">Buyurtma berish</a>
+        </div>
+      </div>
+
+      <div class="card" id="card" style="width: 18rem;">
+        <img src="images/elektrod.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Elektrod</h5>
+          <p class="card-text">
+            Nomi: Arsenal <br>
+            Narxi: 500 sum
+          </p>
+          <a href="#" class="btn btn-primary">Buyurtma berish</a>
+        </div>
+      </div>
+
+      <div class="card" id="card" style="width: 18rem;">
+        <img src="images/shpatel.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Shpatel</h5>
+          <p class="card-text">
+            Nomi: Sigma <br>
+            Narxi: 45 000 sum
+          </p>
+          <a href="#" class="btn btn-primary">Buyurtma berish</a>
+        </div>
+      </div>
+
+      <div class="card" id="card" style="width: 18rem;">
+        <img src="images/Shpatel-2.webp" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Shpatel</h5>
+          <p class="card-text">
+            Nomi: Sigma <br>
+            Narxi: 20 000 sum
+          </p>
+          <a href="#" class="btn btn-primary">Buyurtma berish</a>
+        </div>
+      </div>
+
+      <div class="card" id="card" style="width: 18rem;">
+        <img src="images/a-volik.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Volik</h5>
+          <p class="card-text">
+            Nomi: Total <br>
+            Narxi: 30 000 sum
+          </p>
+          <a href="#" class="btn btn-primary">Buyurtma berish</a>
+        </div>
+      </div>
+
+      <div class="card" id="card" style="width: 18rem;">
+        <img src="images/chotka.webp" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Chotka</h5>
+          <p class="card-text">
+            Nomi: LT <br>
+            Narxi: 15 000 sum
+          </p>
+          <a href="#" class="btn btn-primary">Buyurtma berish</a>
+        </div>
+      </div>
+
+
+      <div class="card" id="card" style="width: 18rem;">
+        <img src="images/disk.webp" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Balg'arka disk</h5>
+          <p class="card-text">
+            Nomi: Epa <br>
+            Narxi: 15 000 sum
+          </p>
+          <a href="#" class="btn btn-primary">Buyurtma berish</a>
+        </div>
+      </div>
+
+      <div class="card" id="card" style="width: 18rem;">
+        <img src="images/Skoch.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Skoch</h5>
+          <p class="card-text">
+            Nomi: Sigma <br>
+            Narxi: 20 000 sum
+          </p>
+          <a href="#" class="btn btn-primary">Buyurtma berish</a>
+        </div>
+      </div>
+
+      <div class="card" id="card" style="width: 18rem;">
+        <img src="images/Izalenta.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Izalenta</h5>
+          <p class="card-text">
+            Nomi: Zubr <br>
+            Narxi: 5 000 sum
+          </p>
+          <a href="#" class="btn btn-primary">Buyurtma berish</a>
+        </div>
+      </div>
+
+      <span id="Boyoqlar"></span>
+      <h5 class="catigory">Bo'yoqlar</h5>
+
+      <div class="card" id="card" style="width: 18rem;">
+        <img src="images/kok.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Oq emal</h5>
+          <p class="card-text">
+            Nomi: Hayat <br>
+            Narxi: 110 000 sum
+          </p>
+          <a href="#" class="btn btn-primary">Buyurtma berish</a>
+        </div>
+      </div>
+
+      <div class="card" id="card" style="width: 18rem;">
+        <img src="images/pol-emal.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Pol emali</h5>
+          <p class="card-text">
+            Nomi: Hayat <br>
+            Narxi: 95 000 sum
+          </p>
+          <a href="#" class="btn btn-primary">Buyurtma berish</a>
+        </div>
+      </div>
+
+      <div class="card" id="card" style="width: 18rem;">
+        <img src="images/lok-yaltiroq.webp" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Yaxta uchun yaltiroq lok</h5>
+          <p class="card-text">
+            Nomi: Hayat <br>
+            Narxi: 110 000 sum
+          </p>
+          <a href="#" class="btn btn-primary">Buyurtma berish</a>
+        </div>
+      </div>
+
+      <div class="card" id="card" style="width: 18rem;">
+        <img src="images/qora.jpg" class="card-img-top row" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Qora emal</h5>
+          <p class="card-text">
+            Nomi: Hayat <br>
+            Narxi: 110 000 sum
+          </p>
+          <a href="#" class="btn btn-primary">Buyurtma berish</a>
+        </div>
+      </div>
+
+      <div class="card" id="card" style="width: 18rem;">
+        <img src="images/emal.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Pol emali</h5>
+          <p class="card-text">
+            Nomi: UZcolor <br>
+            Narxi: 90 000 sum
+          </p>
+          <a href="#" class="btn btn-primary">Buyurtma berish</a>
+        </div>
+      </div>
+
+      <div class="card" id="card" style="width: 18rem;">
+        <img src="images/oq-uzcolor.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Oq emal</h5>
+          <p class="card-text">
+            Nomi: UZcolor <br>
+            Narxi: 90 000 sum
+          </p>
+          <a href="#" class="btn btn-primary">Buyurtma berish</a>
+        </div>
+      </div>
+
+      <div class="card" id="card" style="width: 18rem;">
+        <img src="images/Sariq1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Sariq emal</h5>
+          <p class="card-text">
+            Nomi: Tekman <br>
+            Narxi: 90 000 sum
+          </p>
+          <a href="#" class="btn btn-primary">Buyurtma berish</a>
+        </div>
+      </div>
+
+      <div class="card" id="card" style="width: 18rem;">
+        <img src="images/kok-uz.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Ko'k emal</h5>
+          <p class="card-text">
+            Nomi: Uzcolor <br>
+            Narxi: 90 000 sum
+          </p>
+          <a href="#" class="btn btn-primary">Buyurtma berish</a>
+        </div>
+      </div>
+
+      <div class="card" id="card" style="width: 18rem;">
+        <img src="images/vodim.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Водоэмульсия HAYAT</h5>
+          <p class="card-text">
+            Nomi: Hayat <br>
+            Narxi: 130 000 sum
+          </p>
+          <a href="#" class="btn btn-primary">Buyurtma berish</a>
+        </div>
+      </div>
+
+      <div class="card" id="card" style="width: 18rem;">
+        <img src="images/ " class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"> </h5>
+          <p class="card-text">
+            Nomi: <br>
+            Narxi: 000 sum
+          </p>
+          <a href="#" class="btn btn-primary">Buyurtma berish</a>
+        </div>
+      </div>
+
+      <div class="card" id="card" style="width: 18rem;">
+        <img src="images/ " class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"> </h5>
+          <p class="card-text">
+            Nomi: <br>
+            Narxi: 000 sum
+          </p>
+          <a href="#" class="btn btn-primary">Buyurtma berish</a>
+        </div>
+      </div>
+
+      <div class="card" id="card" style="width: 18rem;">
+        <img src="images/ " class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"> </h5>
+          <p class="card-text">
+            Nomi: <br>
+            Narxi: 000 sum
+          </p>
+          <a href="#" class="btn btn-primary">Buyurtma berish</a>
+        </div>
+      </div>
+
+      <div class="card" id="card" style="width: 18rem;">
+        <img src="images/ " class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"> </h5>
+          <p class="card-text">
+            Nomi: <br>
+            Narxi: 000 sum
+          </p>
+          <a href="#" class="btn btn-primary">Buyurtma berish</a>
+        </div>
+      </div>
+
+      <div class="card" id="card" style="width: 18rem;">
+        <img src="images/ " class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"> </h5>
+          <p class="card-text">
+            Nomi: <br>
+            Narxi: 000 sum
+          </p>
+          <a href="#" class="btn btn-primary">Buyurtma berish</a>
+        </div>
+      </div>
+
+      <div class="card" id="card" style="width: 18rem;">
+        <img src="images/ " class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"> </h5>
+          <p class="card-text">
+            Nomi: <br>
+            Narxi: 000 sum
+          </p>
+          <a href="#" class="btn btn-primary">Buyurtma berish</a>
+        </div>
+      </div>
+
+      <div class="card" id="card" style="width: 18rem;">
+        <img src="images/ " class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"> </h5>
+          <p class="card-text">
+            Nomi: <br>
+            Narxi: 000 sum
+          </p>
+          <a href="#" class="btn btn-primary">Buyurtma berish</a>
+        </div>
+      </div>
+
+      <div class="card" id="card" style="width: 18rem;">
+        <img src="images/ " class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"> </h5>
+          <p class="card-text">
+            Nomi: <br>
+            Narxi: 000 sum
+          </p>
+          <a href="#" class="btn btn-primary">Buyurtma berish</a>
+        </div>
+      </div>
+
+      <div class="card" id="card" style="width: 18rem;">
+        <img src="images/ " class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"> </h5>
+          <p class="card-text">
+            Nomi: <br>
+            Narxi: 000 sum
+          </p>
+          <a href="#" class="btn btn-primary">Buyurtma berish</a>
+        </div>
+      </div>
+
+      <div class="card" id="card" style="width: 18rem;">
+        <img src="images/ " class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"> </h5>
+          <p class="card-text">
+            Nomi: <br>
+            Narxi: 000 sum
+          </p>
+          <a href="#" class="btn btn-primary">Buyurtma berish</a>
+        </div>
+      </div>
+    </article>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+</html>

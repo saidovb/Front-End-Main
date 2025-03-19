@@ -1,0 +1,54 @@
+body {
+    animation: sb infinite 600ms ease;
+}
+
+.insta-div {
+    display: none;
+}
+
+.tg-div {
+    display: none;
+}
+
+@keyframes sb {
+    10% {
+        background-color: black;
+    }
+
+    20% {
+        background-color: yellow;
+    }
+
+    30% {
+        background-color: blue;
+    }
+
+    40% {
+        background-color: orange;
+    }
+
+    50% {
+        background-color: purple;
+    }
+
+    60% {
+        background-color: rgb(0, 247, 255);
+    }
+
+    70% {
+        background-color: pink;
+    }
+
+    80% {
+        background-color: green;
+    }
+
+    90% {
+        background-color: red;
+    }
+
+    100% {
+        background-color: rgb(255, 255, 255);
+    }
+
+}

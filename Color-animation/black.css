@@ -1,0 +1,54 @@
+body {
+    background-color: black;
+}
+
+.insta-div {
+    right: 0%;
+}
+
+.tg-div {
+    right: 4%;
+}
+
+.insta-div, .tg-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    bottom: 0px;
+}
+
+.insta-link, .tg-link {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.insta-div .fa, .tg-div .fa {
+    color: rgb(0, 21, 255);
+    transform: translateY(50%);
+    transition: transform 0.5s ease, color 0.5s ease;
+}
+
+.insta-txt, .tg-txt {
+    color: rgba(0, 17, 255, 0.233);
+    font-size: 15px;
+    opacity: 0;
+    transform: translateY(-70%);
+    transition: color 1s ease, transform 1s ease;
+}
+
+.insta-div:hover .fa,
+.tg-div:hover .fa {
+    transform: translateY(-10%);
+    color: rgb(132, 228, 255);
+    text-shadow: 2px -2px 10px rgb(120, 180, 255);
+}
+
+.insta-div:hover .insta-txt,
+.tg-div:hover .tg-txt {
+    opacity: 1;
+    color: rgb(132, 228, 255);
+    transform: translateY(-5%);
+}
