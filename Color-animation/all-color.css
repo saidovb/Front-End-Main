@@ -1,54 +1,26 @@
 body {
-    animation: sb infinite 600ms ease;
+    animation: colors 2s infinite ease-in-out;
 }
 
-.insta-div {
-    display: none;
+.social-dock {
+    opacity: 0 !important;
+    pointer-events: none !important;
+    transform: translateY(20px) !important;
 }
 
-.tg-div {
-    display: none;
-}
-
-@keyframes sb {
-    10% {
-        background-color: black;
-    }
-
-    20% {
-        background-color: yellow;
-    }
-
-    30% {
-        background-color: blue;
-    }
-
-    40% {
-        background-color: orange;
-    }
-
-    50% {
-        background-color: purple;
-    }
-
-    60% {
-        background-color: rgb(0, 247, 255);
-    }
-
-    70% {
-        background-color: pink;
-    }
-
-    80% {
-        background-color: green;
-    }
-
-    90% {
-        background-color: red;
-    }
-
-    100% {
-        background-color: rgb(255, 255, 255);
-    }
-
+@keyframes colors {
+    0%   { background: #0a0a0a; }
+    8%   { background: #ff0055; }
+    16%  { background: #ff6600; }
+    24%  { background: #ffe600; }
+    32%  { background: #00e676; }
+    40%  { background: #00e5ff; }
+    48%  { background: #2979ff; }
+    56%  { background: #d500f9; }
+    64%  { background: #ff4081; }
+    72%  { background: #76ff03; }
+    80%  { background: #ff6d00; }
+    88%  { background: #1de9b6; }
+    96%  { background: #ffffff; }
+    100% { background-color: #0080ff; }
 }

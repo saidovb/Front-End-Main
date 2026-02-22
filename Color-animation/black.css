@@ -1,54 +1,120 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
 body {
-    background-color: black;
+    background: #0a0a0a;
+    min-height: 100vh;
+    font-family: 'Space Mono', monospace;
+    cursor: crosshair;
 }
 
-.insta-div {
-    right: 0%;
-}
-
-.tg-div {
-    right: 4%;
-}
-
-.insta-div, .tg-div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.social-dock {
     position: fixed;
-    bottom: 0px;
-}
-
-.insta-link, .tg-link {
-    text-decoration: none;
+    bottom: 20px;
+    right: 18px;
     display: flex;
     flex-direction: column;
+    gap: 10px;
+    align-items: flex-end;
+    animation: slideUp 0.6s 0.2s cubic-bezier(0.34,1.56,0.64,1) both;
+    transition: opacity 0.4s, transform 0.4s;
+    z-index: 100;
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.social-btn {
+    display: flex;
     align-items: center;
+    text-decoration: none;
+    border-radius: 50px;
+    overflow: hidden;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    transition: transform 0.25s cubic-bezier(0.34,1.56,0.64,1);
+    background: 0.3s, border-color 0.3s, box-shadow 0.3s;
 }
 
-.insta-div .fa, .tg-div .fa {
-    color: rgb(0, 21, 255);
-    transform: translateY(50%);
-    transition: transform 0.5s ease, color 0.5s ease;
+.social-btn:active { transform: scale(0.96); }
+
+.social-btn .fa {
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+    flex-shrink: 0;
+    transition: color 0.3s, text-shadow 0.3s;
+    line-height: 46px;
+    text-align: center;
 }
 
-.insta-txt, .tg-txt {
-    color: rgba(0, 17, 255, 0.233);
-    font-size: 15px;
+.social-btn span {
+    max-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 12px;
+    letter-spacing: 0.05em;
     opacity: 0;
-    transform: translateY(-70%);
-    transition: color 1s ease, transform 1s ease;
+    padding-right: 0;
+    transition: max-width 0.4s ease, opacity 0.3s ease 0.08s, padding-right 0.4s ease;
 }
 
-.insta-div:hover .fa,
-.tg-div:hover .fa {
-    transform: translateY(-10%);
-    color: rgb(132, 228, 255);
-    text-shadow: 2px -2px 10px rgb(120, 180, 255);
-}
-
-.insta-div:hover .insta-txt,
-.tg-div:hover .tg-txt {
+.social-btn:hover span {
+    max-width: 160px;
     opacity: 1;
-    color: rgb(132, 228, 255);
-    transform: translateY(-5%);
+    padding-right: 16px;
+}
+
+.insta .fa { color: rgba(190,130,255,0.75); }
+
+.insta:hover {
+    transform: translateX(-4px) scale(1.03);
+    background: rgba(190,100,255,0.12);
+    border-color: rgba(190,100,255,0.3);
+    box-shadow: 0 6px 28px rgba(170,80,255,0.3);
+}
+.insta:hover .fa {
+    color: #d580ff;
+    text-shadow: 0 0 12px rgba(200,100,255,0.8);
+}
+.insta span { color: rgba(210,150,255,0.9); }
+
+.tg .fa { color: rgba(80,180,255,0.75); }
+
+.tg:hover {
+    transform: translateX(-4px) scale(1.03);
+    background: rgba(60,160,255,0.12);
+    border-color: rgba(80,180,255,0.3);
+    box-shadow: 0 6px 28px rgba(60,140,255,0.3);
+}
+.tg:hover .fa {
+    color: #7bcfff;
+    text-shadow: 0 0 12px rgba(80,180,255,0.8);
+}
+.tg span { color: rgba(120,200,255,0.9); }
+
+
+
+@media (hover: none) {
+    .social-btn span {
+        max-width: 140px;
+        opacity: 1;
+        padding-right: 14px;
+    }
+    .social-btn .fa {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 21px;
+    }
+    .social-btn {
+        background: rgba(255,255,255,0.09);
+        border-color: rgba(255,255,255,0.15);
+    }
 }

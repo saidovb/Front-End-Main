@@ -1,26 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Background Animation</title>
-    <link rel="stylesheet" id="link1" href="black.css">
-    <link rel="stylesheet" id="link2" href="all-color.css" disabled>
+    <link rel="stylesheet" id="css-dark" href="black.css">
+    <link rel="stylesheet" id="css-color" href="all-color.css" disabled>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
-    <span class="insta-div">
-        <a target="_blank" href="http://instagram.com/Mansurvich.10" class="insta-link">
-            <i class="fa fa-instagram" style="font-size: 22px;"></i>
-            <span class="insta-txt">Mansurvich.10</span>
-        </a>
-    </span>
 
-    <span class="tg-div">
-        <a href="https://t.me/Saidov_Behruzbek" target="_blank" class="tg-link">
-            <i class="fa fa-telegram" style="font-size: 22px;"></i>
-            <span class="tg-txt">Saidov_Behruzbek</span>
+    <div class="social-dock">
+        <a href="http://instagram.com/Mansurvich.10" target="_blank" class="social-btn insta">
+            <i class="fa fa-instagram"></i>
+            <span>Mansurvich.10</span>
         </a>
-    </span>
+        <a href="https://t.me/saidov_off" target="_blank" class="social-btn tg">
+            <i class="fa fa-telegram"></i>
+            <span>Behruzbek</span>
+        </a>
+    </div>
 
-    <script src="java-script.js"></script>
+    <script>
+        const dark  = document.getElementById('css-dark');
+        const color = document.getElementById('css-color');
+        let on = false;
+
+        function toggle() {
+            on = !on;
+            dark.disabled  = on;
+            color.disabled = !on;
+        }
+
+        // Mouse left-click (not on social links)
+        document.body.addEventListener('click', e => {
+            if (!e.target.closest('.social-dock')) toggle();
+        });
+
+        // Touch (phone)
+        document.body.addEventListener('touchend', e => {
+            if (!e.target.closest('.social-dock')) {
+                e.preventDefault();
+                toggle();
+            }
+        }, { passive: false });
+
+        // Keys: Space, Enter, Ctrl
+        document.addEventListener('keydown', e => {
+            if (['Space', 'Enter', 'ControlLeft', 'ControlRight'].includes(e.code)) {
+                e.preventDefault();
+                toggle();
+            }
+        });
+    </script>
 </body>
 </html>
