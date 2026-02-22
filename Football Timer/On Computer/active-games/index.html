@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>⚡ Faol O'yinlar — Futbol Maydoni</title>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Barlow:wght@400;500;600&family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="active-style.css">
+</head>
+<body>
+
+  <div class="pitch-bg">
+    <div class="pitch-line center-circle"></div>
+    <div class="pitch-line center-line"></div>
+  </div>
+
+  <header>
+    <div class="header-left">
+      <span class="logo-icon">⚽</span>
+      <h1>Futbol Maydoni</h1>
+    </div>
+    <nav>
+      <a href="../index.html" class="nav-link">Yangi O'yin</a>
+      <a href="index.html" class="nav-link active">
+        Faol O'yinlar
+        <span class="badge" id="activeCount">0</span>
+      </a>
+      <a href="../history/index.html" class="nav-link">Tarix</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="page-title">
+      <h2>⚡ Faol O'yinlar</h2>
+      <p id="subtitleText">Hozir maydonda o'ynayotgan jamoalar</p>
+    </div>
+
+    <!-- EMPTY STATE -->
+    <div id="emptyState" class="empty-state hidden">
+      <div class="empty-icon">🏟️</div>
+      <h3>Hozir hech qanday faol o'yin yo'q</h3>
+      <p>Yangi o'yin boshlash uchun quyidagi tugmani bosing</p>
+      <a href="../index.html" class="cta-btn">+ Yangi O'yin Boshlash</a>
+    </div>
+
+    <!-- GAMES GRID -->
+    <div id="gamesGrid" class="games-grid"></div>
+
+    <!-- PENDING SECTION -->
+    <div id="pendingSection" class="hidden">
+      <h3 class="section-title">⏳ Boshlanmagan O'yinlar</h3>
+      <div id="pendingGrid" class="games-grid"></div>
+    </div>
+  </main>
+
+  <script src="active-js.js"></script>
+</body>
+</html>

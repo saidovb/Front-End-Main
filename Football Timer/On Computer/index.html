@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>⚽ Futbol Maydoni</title>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Pitch lines background -->
+  <div class="pitch-bg">
+    <div class="pitch-line center-circle"></div>
+    <div class="pitch-line center-line"></div>
+    <div class="pitch-line corner tl"></div>
+    <div class="pitch-line corner tr"></div>
+    <div class="pitch-line corner bl"></div>
+    <div class="pitch-line corner br"></div>
+  </div>
+
+  <header>
+    <div class="header-left">
+      <span class="logo-icon">⚽</span>
+      <h1>Futbol Maydoni</h1>
+    </div>
+    <nav>
+      <a href="index.html" class="nav-link active">Yangi O'yin</a>
+      <a href="active-games/index.html" class="nav-link" id="activeGamesLink">
+        Faol O'yinlar
+        <span class="badge" id="activeCount">0</span>
+      </a>
+      <a href="history/index.html" class="nav-link" id="historyLink">
+        Tarix
+        <span class="badge secondary" id="historyCount">0</span>
+      </a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="page-title">
+      <h2>Yangi O'yin Boshlash</h2>
+      <p>To'lov ma'lumotlarini kiriting</p>
+    </div>
+
+    <div class="form-card">
+
+      <!-- MODE -->
+      <div class="form-section">
+        <label class="section-label">Vaqt turi</label>
+        <div class="mode-switch">
+          <button type="button" id="dayBtn" class="mode-btn active">
+            <span class="mode-icon">☀️</span>
+            <span class="mode-name">Kunduzgi</span>
+            <span class="mode-rate">40 000 so'm/soat</span>
+          </button>
+          <button type="button" id="nightBtn" class="mode-btn">
+            <span class="mode-icon">🌙</span>
+            <span class="mode-name">Kechki</span>
+            <span class="mode-rate">100 000 so'm/soat</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- TEAM NAME -->
+      <div class="form-section">
+        <label class="section-label" for="teamName">Jamoa nomi <span class="optional">(ixtiyoriy)</span></label>
+        <input type="text" id="teamName" class="form-input" placeholder="Masalan: A Jamoa, Sariq Komandir..." />
+      </div>
+
+      <!-- AMOUNT -->
+      <div class="form-section">
+        <label class="section-label" for="amount">To'langan summa</label>
+        <div class="amount-row">
+          <input type="number" id="amount" class="form-input amount-input" min="5" placeholder="0" required />
+          <span class="amount-unit">× 1000 so'm</span>
+        </div>
+        <div class="time-preview" id="timePreview">
+          <span class="preview-icon">⏱</span>
+          <span id="previewText">Summani kiriting...</span>
+        </div>
+      </div>
+
+      <!-- NIGHT ONLY -->
+      <div class="form-section night-only hidden">
+        <label class="section-label" for="captain">Sardor ismi <span class="optional">(ixtiyoriy)</span></label>
+        <input type="text" id="captain" class="form-input" placeholder="Ismni kiriting..." />
+      </div>
+
+      <div class="form-section night-only hidden">
+        <label class="section-label" for="phone">Telefon <span class="optional">(ixtiyoriy)</span></label>
+        <div class="phone-row">
+          <span class="phone-prefix">+998</span>
+          <input type="number" id="phone" class="form-input phone-input" placeholder="90 123 45 67" />
+        </div>
+      </div>
+
+      <!-- SUBMIT -->
+      <button type="button" id="startBtn" class="submit-btn">
+        <span>Hisoblash va Boshlash</span>
+        <span class="btn-arrow">→</span>
+      </button>
+    </div>
+
+    <!-- Active games quick view -->
+    <div id="activeGamesQuick" class="quick-active hidden">
+      <h3>⚡ Hozir Faol O'yinlar</h3>
+      <div id="quickActiveList"></div>
+      <a href="active-games/index.html" class="see-all-link">Hammasini ko'rish →</a>
+    </div>
+
+  </main>
+
+  <script src="javascript.js"></script>
+</body>
+</html>

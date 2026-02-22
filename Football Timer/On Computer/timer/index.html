@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>⏱ Taymer — Futbol Maydoni</title>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Barlow:wght@400;500;600&family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="timer-style.css">
+</head>
+<body>
+
+  <div class="pitch-bg">
+    <div class="pitch-line center-circle"></div>
+    <div class="pitch-line center-line"></div>
+  </div>
+
+  <header>
+    <div class="header-left">
+      <span class="logo-icon">⚽</span>
+      <h1>Futbol Maydoni</h1>
+    </div>
+    <nav>
+      <a href="../index.html" class="nav-link">Bosh Sahifa</a>
+      <a href="../active-games/index.html" class="nav-link">
+        Faol O'yinlar
+        <span class="badge" id="activeCount">0</span>
+      </a>
+      <a href="../history/index.html" class="nav-link">Tarix</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===== SETUP SECTION ===== -->
+    <section id="setupSection">
+      <div class="game-badge" id="modeBadge">☀️ Kunduzgi</div>
+      <h2 class="team-name" id="setupTeamName">Jamoa</h2>
+
+      <div class="info-grid">
+        <div class="info-card">
+          <div class="info-label">To'langan summa</div>
+          <div class="info-value" id="displayAmount">—</div>
+        </div>
+        <div class="info-card">
+          <div class="info-label">Hisoblangan vaqt</div>
+          <div class="info-value" id="displayBaseTime">—</div>
+        </div>
+      </div>
+
+      <div class="extra-section">
+        <label class="field-label" for="extraMinutes">Qo'shimcha vaqt (daqiqa)</label>
+        <div class="extra-row">
+          <button class="extra-adj" id="extraMinus">−</button>
+          <input type="number" id="extraMinutes" class="extra-input" min="0" value="0" />
+          <button class="extra-adj" id="extraPlus">+</button>
+        </div>
+      </div>
+
+      <button class="start-btn" id="confirmStartBtn">
+        <span class="start-icon">▶</span> Taymer Boshlash
+      </button>
+
+      <div class="captain-row" id="captainRow" style="display:none">
+        <span id="captainDisplay"></span>
+        <span id="phoneDisplay"></span>
+      </div>
+    </section>
+
+    <!-- ===== RUNNING SECTION ===== -->
+    <section id="runningSection" class="hidden">
+      <div class="game-badge running" id="runBadge">☀️ Kunduzgi</div>
+      <h2 class="team-name" id="runTeamName">Jamoa</h2>
+
+      <div class="timer-ring-wrap">
+        <svg class="ring-svg" viewBox="0 0 300 300">
+          <circle class="ring-bg" cx="150" cy="150" r="136"/>
+          <circle class="ring-fill" id="ringFill" cx="150" cy="150" r="136"
+                  stroke-dasharray="854.5" stroke-dashoffset="0"/>
+        </svg>
+        <div class="timer-center">
+          <div class="timer-display" id="timeDisplay">00:00</div>
+          <div class="timer-sub" id="timerSub">qoldi</div>
+        </div>
+      </div>
+
+      <div class="run-info">
+        <div class="run-info-item">
+          <span class="run-info-label">Boshlandi</span>
+          <span class="run-info-val" id="startedAtDisplay">—</span>
+        </div>
+        <div class="run-info-item">
+          <span class="run-info-label">Tugaydi</span>
+          <span class="run-info-val" id="endsAtDisplay">—</span>
+        </div>
+      </div>
+
+      <div class="action-row">
+        <button class="action-btn extend-btn" id="extendBtn">⊕ Vaqt qo'shish</button>
+        <button class="action-btn stop-btn" id="stopBtn">⏹ To'xtatish</button>
+      </div>
+    </section>
+
+    <!-- ===== FINISHED SECTION ===== -->
+    <section id="finishedSection" class="hidden">
+      <div class="finish-icon">🏁</div>
+      <h2 class="finish-title">O'yin Tugadi!</h2>
+      <p class="finish-sub" id="finishSub">Vaqt tugadi</p>
+      <div class="finish-actions">
+        <a href="../index.html" class="finish-btn primary">Yangi O'yin</a>
+        <a href="../history/index.html" class="finish-btn secondary">Tarixni Ko'rish</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- EXTEND MODAL -->
+  <div class="modal-overlay hidden" id="extendModal">
+    <div class="modal">
+      <h3>Vaqt Qo'shish</h3>
+      <p>Qo'shimcha daqiqa kiriting:</p>
+      <div class="extra-row">
+        <button class="extra-adj" id="modalMinus">−</button>
+        <input type="number" id="modalMinutes" class="extra-input" value="15" min="1" />
+        <button class="extra-adj" id="modalPlus">+</button>
+      </div>
+      <div class="modal-preview" id="modalPreview"></div>
+      <div class="modal-actions">
+        <button class="modal-btn confirm" id="modalConfirm">Qo'shish</button>
+        <button class="modal-btn cancel" id="modalCancel">Bekor</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="timer-js.js"></script>
+</body>
+</html>
