@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" href="images/image.jpg">
+    <link rel="icon" type="image/jpeg" href="images/image.jpg">
+    <link rel="manifest" href="manifest.json">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Outfit:wght@300;400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="calculator">
+
+        <div class="display">
+            <div class="expr" id="expr">0</div>
+            <div class="preview" id="preview"></div>
+        </div>
+
+        <div class="sci-panel" id="sciPanel">
+            <button data-fn="sin">sin</button>
+            <button data-fn="cos">cos</button>
+            <button data-fn="tan">tan</button>
+            <button data-fn="pow">x^y</button>
+            <button data-fn="log">log</button>
+            <button data-fn="ln">ln</button>
+            <button data-fn="sqrt">√</button>
+            <button data-fn="pi">π</button>
+            <button data-fn="sq">x²</button>
+            <button data-fn="cb">x³</button>
+            <button data-fn="inv">1/x</button>
+            <button data-fn="e">e</button>
+        </div>
+
+        <div class="pad">
+            <!-- Row 1 -->
+            <button class="op sci-toggle" id="sciToggle" data-tip="F">f(x)</button>
+            <button class="op" data-val="C" data-tip="Esc">C</button>
+            <button class="op" data-val="⌫" data-tip="⌫">⌫</button>
+            <button class="op operator" data-val="/" data-tip="/">÷</button>
+            <!-- Row 2 -->
+            <button data-val="7" data-tip="7">7</button>
+            <button data-val="8" data-tip="8">8</button>
+            <button data-val="9" data-tip="9">9</button>
+            <button class="op operator" data-val="*" data-tip="*">×</button>
+            <!-- Row 3 -->
+            <button data-val="4" data-tip="4">4</button>
+            <button data-val="5" data-tip="5">5</button>
+            <button data-val="6" data-tip="6">6</button>
+            <button class="op operator" data-val="-" data-tip="-">−</button>
+            <!-- Row 4 -->
+            <button data-val="1" data-tip="1">1</button>
+            <button data-val="2" data-tip="2">2</button>
+            <button data-val="3" data-tip="3">3</button>
+            <button class="op operator" data-val="+" data-tip="+">+</button>
+            <!-- Row 5 -->
+            <button data-val="()" data-tip="( )">( )</button>
+            <button data-val="0" data-tip="0">0</button>
+            <button data-val="." data-tip=".">.</button>
+            <button class="eq" data-val="=" data-tip="Enter">=</button>
+        </div>
+
+    </div>
+
+    <!-- Keyboard tooltip -->
+    <div class="kbd-tip" id="kbdTip"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

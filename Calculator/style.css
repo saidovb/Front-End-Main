@@ -1,0 +1,246 @@
+:root {
+    --bg:       #0b0b0f;
+    --body:     #131318;
+    --surface:  #1c1c24;
+    --surface2: #24242f;
+    --op:       #1a2535;
+    --op-hover: #1f2e42;
+    --accent:   #00d4aa;
+    --accent2:  #00aaff;
+    --text:     #e8e8f4;
+    --muted:    rgba(232,232,244,0.35);
+    --border:   rgba(255,255,255,0.07);
+    --gap:      9px;
+    --r:        16px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg);
+    font-family: 'Outfit', sans-serif;
+    background-image:
+        radial-gradient(ellipse at 25% 20%, rgba(0,212,170,.07) 0%, transparent 55%),
+        radial-gradient(ellipse at 75% 80%, rgba(0,170,255,.06) 0%, transparent 55%);
+}
+
+/* ── SHELL ── */
+.calculator {
+    width: min(94vw, 390px);
+    background: var(--body);
+    border: 1px solid var(--border);
+    border-radius: 28px;
+    padding: 18px;
+    box-shadow: 0 32px 80px rgba(0,0,0,.75), 0 0 0 1px rgba(255,255,255,.03);
+    animation: appear .5s cubic-bezier(.34,1.56,.64,1) both;
+}
+
+@keyframes appear {
+    from { opacity:0; transform: translateY(28px) scale(.95); }
+    to   { opacity:1; transform: none; }
+}
+
+/* ── DISPLAY ── */
+.display {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--r);
+    padding: 14px 18px 12px;
+    margin-bottom: 12px;
+    min-height: 96px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+.expr {
+    font-family: 'DM Mono', monospace;
+    font-size: clamp(20px, 5.5vw, 30px);
+    color: var(--text);
+    word-break: break-all;
+    text-align: right;
+    line-height: 1.3;
+}
+
+.preview {
+    font-family: 'DM Mono', monospace;
+    font-size: 14px;
+    color: var(--accent);
+    opacity: .75;
+    min-height: 18px;
+}
+
+/* ── SCIENTIFIC PANEL ── */
+.sci-panel {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--gap);
+    margin-bottom: var(--gap);
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height .4s cubic-bezier(.4,0,.2,1), opacity .3s;
+}
+
+.sci-panel.open {
+    max-height: 260px;
+    opacity: 1;
+}
+
+.sci-panel button {
+    height: 54px;          
+    border-radius: 12px;
+    font-size: 15px;
+    font-family: 'DM Mono', monospace;
+    color: var(--accent);
+    background: rgba(0,212,170,.08);
+    border: 1px solid rgba(0,212,170,.15);
+    cursor: pointer;
+    transition: background .2s, transform .15s, box-shadow .2s;
+}
+
+.sci-panel button:hover {
+    background: rgba(0,212,170,.18);
+    box-shadow: 0 0 16px rgba(0,212,170,.22);
+}
+
+.sci-panel button:active { transform: scale(.92); }
+
+/* ── PAD ── */
+.pad {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--gap);
+}
+
+/* Base number button */
+.pad button {
+    height: 70px;
+    border-radius: var(--r);
+    font-size: 20px;
+    font-family: 'Outfit', sans-serif;
+    color: var(--text);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    -webkit-tap-highlight-color: transparent;
+    transition: background .18s, transform .12s, box-shadow .18s;
+}
+
+.pad button:hover  { background: var(--surface2); }
+.pad button:active { transform: scale(.9); }
+
+/* Ripple flash */
+.pad button::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle, rgba(255,255,255,.13) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity .3s;
+    pointer-events: none;
+}
+.pad button:active::after { opacity: 1; }
+
+/* Utility ops (C, ⌫, f(x)) */
+.pad .op {
+    background: var(--op);
+    border-color: rgba(0,170,255,.1);
+    color: #7ad4ff;
+    font-size: 17px;
+}
+.pad .op:hover { background: var(--op-hover); box-shadow: 0 0 14px rgba(0,170,255,.12); }
+
+/* f(x) active state */
+.pad .sci-toggle.active {
+    background: rgba(0,212,170,.15);
+    border-color: rgba(0,212,170,.3);
+    color: var(--accent);
+    box-shadow: 0 0 14px rgba(0,212,170,.22);
+}
+
+/* ── OPERATOR BUTTONS — bigger, bolder ── */
+.pad .operator {
+    font-size: 28px;       /* much bigger symbol */
+    font-weight: 300;
+    background: var(--op);
+    border: 1px solid rgba(0,212,170,.18);
+    color: var(--accent);
+    letter-spacing: -1px;
+}
+.pad .operator:hover {
+    background: var(--op-hover);
+    box-shadow: 0 0 18px rgba(0,212,170,.2);
+    color: #1affd9;
+}
+
+/* Equals */
+.pad .eq {
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 500;
+    box-shadow: 0 4px 22px rgba(0,212,170,.32);
+}
+.pad .eq:hover { filter: brightness(1.12); box-shadow: 0 6px 28px rgba(0,212,170,.45); }
+
+/* ── KEYBOARD TOOLTIP ── */
+.kbd-tip {
+    position: fixed;
+    background: #1e2535;
+    border: 1px solid rgba(0,170,255,.3);
+    color: var(--accent2);
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 8px;
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(-4px);
+    transition: opacity .15s, transform .15s;
+    white-space: nowrap;
+    z-index: 999;
+    box-shadow: 0 4px 16px rgba(0,0,0,.5);
+}
+.kbd-tip.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hide tooltip completely on touch screens */
+@media (hover: none) {
+    .kbd-tip { display: none !important; }
+}
+
+/* ── MOBILE ── */
+@media (max-width: 420px) {
+    .calculator { padding: 12px; border-radius: 22px; }
+
+    .pad button       { height: 64px; font-size: 19px; border-radius: 13px; }
+    .pad .operator    { font-size: 26px; }
+    .pad .eq          { font-size: 22px; }
+    .sci-panel button { height: 50px; font-size: 13px; }
+
+    .expr   { font-size: 22px; }
+    .preview{ font-size: 13px; }
+}
+
+@media (max-width: 360px) {
+    .pad button       { height: 58px; font-size: 17px; }
+    .pad .operator    { font-size: 22px; }
+    .sci-panel button { height: 46px; }
+}
+
+@media (max-height: 700px) {
+    .pad button       { height: 58px; }
+    .sci-panel button { height: 46px; }
+}
